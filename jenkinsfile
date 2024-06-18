@@ -3,7 +3,7 @@ pipeline {
           stages {
             stage('Test') {
                steps {
-                 sh 'cat /var/lib/jenkins/workspace/pipeline/rs1.pem && ssh -ti "rs1.pem" ubuntu@ec2-54-255-94-108.ap-southeast-1.compute.amazonaws.com && df -Th'
+                 sh 'cat /var/lib/jenkins/workspace/pipeline/rs1.pem && ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i "rs1.pem" ubuntu@ec2-54-255-94-108.ap-southeast-1.compute.amazonaws.com && df -Th'
                  }
                }
             }
