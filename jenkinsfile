@@ -3,7 +3,7 @@ pipeline {
           stages {
             stage('Test') {
                steps {
-                 sh 'ssh -i /var/lib/jenkins/workspace/pipeline/rs1.pem ubuntu@ec2-54-255-94-108.ap-southeast-1.compute.amazonaws.com && df -Th'
+                 sh 'ssh -i "/var/lib/jenkins/workspace/pipeline/rs1.pem" ubuntu@ec2-54-255-94-108.ap-southeast-1.compute.amazonaws.com && df -Th'
                  }
                }
             }
